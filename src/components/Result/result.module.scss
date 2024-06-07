@@ -1,0 +1,13 @@
+.result {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto 2rem;
+  padding: 0 1rem;
+
+  &-title {
+    font-size: 1.3rem;
+  }
+}

@@ -1,0 +1,65 @@
+@use '@scss/variables' as *;
+
+.search {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  gap: 0.5rem;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+
+  &-label {
+    flex: 1;
+  }
+
+  &-form {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+  }
+
+  &-input {
+    background: var(--bg2);
+    border: 2px solid var(--primary);
+    padding: 1rem;
+    width: 100%;
+    border-radius: 4px 0 0 4px;
+  }
+
+  &-btn {
+    border: 0;
+    padding: 0 1rem;
+    background: var(--primary);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 4px 4px 0;
+
+    &-loading {
+      background: $disabled;
+      pointer-events: none;
+    }
+  }
+
+  &-loader {
+    animation: spin 1s linear infinite;
+  }
+
+  &-error {
+    color: $error;
+    margin-top: 0.5rem;
+    text-align: center;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
